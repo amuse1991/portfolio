@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Template from "../../Template";
 
 export default class Projects extends Component{
     render(){
         return(
-            <div>this is Projects page</div>
+            <Template>
+                <div>this is Projects page</div>
+            </Template>
         )
     }
 }
