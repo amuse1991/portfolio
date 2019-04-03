@@ -18,7 +18,7 @@ export default class Template extends Component {
         </Row>
           {/* body */}
         <Row className="body">
-          <Col></Col>
+          <Col className="bodyArea">{body}</Col>
         </Row>
         {/* footer */}
         <Row className="footer">
