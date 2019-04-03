@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Template from "../../Template";
 
 export default class Skills extends Component{
     render(){
         return(
-            <div>this is skills page</div>
+            <Template>
+                <div>this is skills page</div>
+            </Template>
         )
     }
 }
