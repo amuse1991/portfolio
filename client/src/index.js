@@ -8,7 +8,8 @@ import * as serviceWorker from './serviceWorker';
 
 import { HashRouter,Route } from "react-router-dom";
 
-import Main from "./components/body/pages/Main";
+import Main from "./components/pages/Main";
+// import {  } from "./components/pages/Main";
 // import Profile from "./components/body/pages/Profile";
 // import Projects from "./components/body/pages/Projects";
 

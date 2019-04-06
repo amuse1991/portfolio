@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import { Link } from "react-scroll";
-import { Nav, NavItem, NavLink, 
+import { Nav, NavItem, NavLink, Navbar, NavbarBrand,
         Dropdown, DropdownItem, DropdownToggle, DropdownMenu,} from "reactstrap";
 import '../../static/css/header.css';
 export default class Header extends Component{
@@ -23,19 +23,27 @@ export default class Header extends Component{
 
     render(){
         return(
-            <div>
+            <div className>
                 <div className="header-div header-title">
-                    <span className="nav-link">Yoonho Shin</span>
+                    {/* <span className="nav-link">Yoonho Shin</span> */}
                 </div>
                 <div className="header-div header-nav">
+                    <Navbar fixed={'top'} color="white">
+                        <NavbarBrand>Yoonho Shin</NavbarBrand>
                     <Nav>
                         <NavItem>
-                            <Link className="nav-link" to="/" spy={true} smooth={true}>HOME</Link>
+                            <Link className="nav-link" to="home" spy={true} smooth={true}
+                                offset={-50} duration={500} onSetActive={this.handleSetActive}>
+                                HOME
+                            </Link>
                         </NavItem>
                         <NavItem>
-                            <Link className="nav-link" to="/profile">ABOUT</Link>
+                        <Link className="nav-link" to="about" spy={true} smooth={true}
+                                duration={500} onSetActive={this.handleSetActive}>
+                                ABOUT
+                                </Link>
                         </NavItem>
-                        <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                        {/* <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                             <DropdownToggle nav caret>
                                 PROJECTS
                             </DropdownToggle>
@@ -43,13 +51,22 @@ export default class Header extends Component{
                                 <DropdownItem>스터디타임</DropdownItem>
                                 <DropdownItem>인공위성 관제 모니터링 웹 서비스</DropdownItem>
                             </DropdownMenu>
-                        </Dropdown>
+                        </Dropdown> */}
                         <NavItem>
-                            <Link className="nav-link" to="/skills">CONTACT</Link>
+                            <Link className="nav-link" to="projects" spy={true} smooth={true}
+                                duration={500} onSetActive={this.handleSetActive}>
+                                PROJECTS
+                                </Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link className="nav-link" to="contact" spy={true} smooth={true}
+                                duration={500} onSetActive={this.handleSetActive}>
+                                CONTACT
+                                </Link>
                         </NavItem>
                     </Nav>
+                    </Navbar>
                 </div>
-                <hr/>
             </div>
 
             

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import Template from "../../Template";
+// import Template from "../../Template";
 import { Container, Col, Row, Jumbotron, Button } from 'reactstrap';
-import Header from '../../header/Header';
 import { Link, Element } from "react-scroll";
-import Profile from "../elements/Profile";
-import Projects from "../elements/Projects";
+import Header from '../header/Header';
+import Home from "../body/home/Home";
+import About from "../body/about/About";
+import Projects from "../body/projects/Projects";
+import Contact from "../body/contact/Contact";
 
 export default class Main extends Component{
     render(){
@@ -13,17 +15,18 @@ export default class Main extends Component{
                 {/* header */}
                 <Row className="header">
                     <Col>
-                        <Header projects={projects}/>
+                        <Header/>
                     </Col>
                 </Row>
-
                 {/* body */}
                 <Row className="body home">
-                    <Col></Col>
+                    <Col>
+                        <Home/>
+                    </Col>
                 </Row>
                 <Row className="body profile">
                     <Col>
-                        <Profile/>
+                        <About/>
                     </Col>
                 </Row>
                 <Row className="body projects">
@@ -32,7 +35,9 @@ export default class Main extends Component{
                     </Col>
                 </Row>
                 <Row className="body contact">
-                    <Col></Col>
+                    <Col>
+                        <Contact/>
+                    </Col>
                 </Row>
                 {/* footer */}
                 <Row className="footer">
