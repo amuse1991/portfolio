@@ -8,10 +8,10 @@ import * as serviceWorker from './serviceWorker';
 
 import { HashRouter,Route } from "react-router-dom";
 
-import Main from "./components/body/pages/Main";
-import Profile from "./components/body/pages/Profile";
-import Projects from "./components/body/pages/Projects";
-import Skills from "./components/body/pages/Skills";
+import Main from "./components/pages/Main";
+// import {  } from "./components/pages/Main";
+// import Profile from "./components/body/pages/Profile";
+// import Projects from "./components/body/pages/Projects";
 
 window.React = React;
 
@@ -19,9 +19,8 @@ ReactDOM.render(
     <HashRouter>
         <div calssName="index">
             <Route exact path = "/" component={Main}/>
-            <Route path = "/profile" component={Profile}/>
-            <Route exact path = "/projects" component={Projects}/>
-            <Route exact path = "/Skills" component={Skills}/>
+            {/* <Route path = "/profile" component={Profile}/>
+            <Route path = "/projects" component={Projects}/> */}
         </div>
     </HashRouter>,document.getElementById('root')
 )
