@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import { Link } from "react-scroll";
-import { Nav, NavItem, NavLink, Navbar, NavbarBrand,
-        Dropdown, DropdownItem, DropdownToggle, DropdownMenu,} from "reactstrap";
+import { Nav, NavItem, Navbar, NavbarBrand} from "reactstrap";
 import '../../static/css/header.css';
 export default class Header extends Component{
 
@@ -39,7 +37,7 @@ export default class Header extends Component{
                         </NavItem>
                         <NavItem>
                         <Link className="nav-link" to="about" spy={true} smooth={true}
-                                duration={500} onSetActive={this.handleSetActive}>
+                                offset={-50} duration={500} onSetActive={this.handleSetActive}>
                                 ABOUT
                                 </Link>
                         </NavItem>
@@ -54,13 +52,13 @@ export default class Header extends Component{
                         </Dropdown> */}
                         <NavItem>
                             <Link className="nav-link" to="projects" spy={true} smooth={true}
-                                duration={500} onSetActive={this.handleSetActive}>
+                                offset={-50} duration={500} onSetActive={this.handleSetActive}>
                                 PROJECTS
                                 </Link>
                         </NavItem>
                         <NavItem>
                             <Link className="nav-link" to="contact" spy={true} smooth={true}
-                                duration={500} onSetActive={this.handleSetActive}>
+                                offset={-50} duration={500} onSetActive={this.handleSetActive}>
                                 CONTACT
                                 </Link>
                         </NavItem>

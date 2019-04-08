@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import {Element} from 'react-scroll';
-import { Jumbotron, Button } from 'reactstrap';
+import { Button } from 'reactstrap';
+import {Link} from "react-scroll";
+import '../../../static/css/home.css';
+
 
 export default class Home extends Component{
-    divStyle = {
-        width:'100vw',
-        height:'100vh'
-    }
     render(){
         return(
             <Element name="home" className="element">
-                <div style={this.divStyle}>
-                    <Jumbotron>
-                        <h1 className="display-3">Hello, world!</h1>
-                        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
-                        <hr className="my-2" />
-                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                        <p className="lead">
-                        <Button color="primary">Learn More</Button>
-                        </p>
-                    </Jumbotron>
+                <div className="home-jumbotron" style={this.divStyle}>
+                    <h1 className="title">Hello, I'm <strong>Yoonho Shin</strong>. <br/>
+                    I'm backend web developer.</h1>
+                    <Link className="nav-link" to="about" spy={true} smooth={true}
+                        offset={-50} duration={500} onSetActive={this.handleSetActive}>
+                        <Button color="primary" size="lg">View my work</Button>
+                    </Link>    
                 </div>
             </Element>
         )

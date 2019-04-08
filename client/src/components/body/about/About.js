@@ -8,7 +8,6 @@ import {Element} from 'react-scroll';
 
 export default class About extends Component{
     divStyle = {
-        backgroundColor:'blue',
         width:'100vw',
         height:'100vh'
     };

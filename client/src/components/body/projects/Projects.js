@@ -4,7 +4,6 @@ import {Element} from 'react-scroll';
 
 export default class Projects extends Component{
     divStyle = {
-        backgroundColor:'green',
         width:'100vw',
         height:'100vh'
     };
