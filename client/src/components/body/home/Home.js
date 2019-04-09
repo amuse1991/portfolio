@@ -6,6 +6,10 @@ import '../../../static/css/home.css';
 
 
 export default class Home extends Component{
+    divStyle = {
+        width:'100%',
+        height:'100vh'
+    };
     render(){
         return(
             <Element name="home" className="element">

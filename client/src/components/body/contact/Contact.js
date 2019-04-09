@@ -4,7 +4,7 @@ import {Element} from 'react-scroll';
 export default class Contact extends Component{
     
     divStyle = {
-        width:'100vw',
+        width:'100%',
         height:'100vh'
     };
 
