@@ -20,6 +20,15 @@ export default class Contact extends Component{
                     </Row>
                     <Row>
                         <Col>
+                            <ul>
+                                <li>mobile<br/>010-6258-1441 </li>
+                                <li>Email<br/>amuse1991@gmail.com</li>
+                                <li>kakao<br/>estrella917@naver.com</li>
+                                <li>blog<br/>https://yoonho-devlog.tistory.com/</li>
+                                <li>github<br/>https://github.com/amuse1991</li>
+                            </ul>
+                        </Col>
+                        <Col>
                             <h6>궁금한 점이 있으신가요?</h6>
                             <Form>
                                 <FormGroup>
