@@ -8,6 +8,7 @@ import '../../../static/css/page-header.css';
 
 import Template from "../../Template";
 import Skills from "./Skills";
+import Intro from "./Intro";
 
 export default class About extends Component{
     divStyle = {
@@ -26,14 +27,12 @@ export default class About extends Component{
                         </Col>
                     </Row>
                     <Row>
-                        <Row>
-                            <p>테스트</p>
-                        </Row>
-                        <Row>
-                            <Col className="skills">
-                                <Skills/>
-                            </Col>
-                        </Row>
+                        <Col>
+                            <Intro/>
+                        </Col>
+                        <Col className="skills">
+                            <Skills/>
+                        </Col>
                     </Row>
                     <Row>
                         <Col className="keywords">

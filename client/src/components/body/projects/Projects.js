@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Template from "../../Template";
 import {Element} from 'react-scroll';
+import { Card, Button, CardHeader, CardFooter, CardBody,
+    CardTitle, CardText } from 'reactstrap';
 
 export default class Projects extends Component{
     divStyle = {

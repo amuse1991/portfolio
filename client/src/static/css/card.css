@@ -1,3 +1,9 @@
 .card-title{
     font-weight: bold
 }
+
+.card-img-top{
+    width:5vw;
+    height: auto;
+    margin: auto;
+}

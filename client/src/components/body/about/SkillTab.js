@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Card, CardImg, CardText, CardBody, CardTitle, Button,  TabContent, TabPane, Nav, NavItem, NavLink, Row, Col,Pagination, PaginationItem, PaginationLink } from 'reactstrap'
+import { Card, CardImg, CardText, CardBody, CardDeck, CardGroup, CardColumns, CardTitle, Button,  TabContent, TabPane, Nav, NavItem, NavLink, Row, Col,Pagination, PaginationItem, PaginationLink } from 'reactstrap'
 import classnames from 'classnames'
 import '../../../static/css/card.css'
 
@@ -12,7 +12,7 @@ export default class SkillTabs extends Component{
     
         this.dataSet = this.props.skills
     
-        this.pageSize = 6; // 페이지당 최대 아이템 개수
+        this.pageSize = 3; // 페이지당 최대 아이템 개수
         this.pagesCount = Math.ceil(this.dataSet.length / this.pageSize); //총 페이지 개수
         this.rowSize = Math.ceil(this.pageSize/2) // 한 Row 당 최대 아이템 개수
     
@@ -50,9 +50,9 @@ export default class SkillTabs extends Component{
         let imageSrc = imageContext(`./${cardData.imgName}`)
 
         return(
-            <Card body outline className="text-center" color={color}>
+            <Card body outline className="text-center" color={color} >
                 {/* 이미지가 정상적으로 로드된 경우에만 이미지 표시 */}
-                {imageSrc==undefined?null:<CardImg width="15%" height="auto" top src={imageSrc}/>} 
+                {imageSrc==undefined?null:<CardImg top src={imageSrc}/>} 
                 <CardTitle>{cardData.title}</CardTitle>
                 {cardData.description.map((descItem)=>
                     descItem==undefined?null:<CardText>{descItem}</CardText>
@@ -63,31 +63,11 @@ export default class SkillTabs extends Component{
 
     render(){
         const { currentPage } = this.state;
-        const slicedDataset = this.dataSet
-                                .slice(
-                                    currentPage * this.pageSize,
-                                    (currentPage + 1) * this.pageSize
-                                )
         
         return(
-            <React.Fragment>                
-                <Row>
-                    {this.dataSet
-                        .slice(
-                            currentPage * this.pageSize,
-                            (currentPage + 1) * this.pageSize
-                        )
-                        .map((data, i) =>
-                                <Col>{this.makeCard(data,this.getCardColor(data.level))}</Col>
-                                
-                        )}
-                    {/* {slicedDataset.slice(0,this.rowSize).map((data)=>
-                        data==undefined?<Col></Col>:<Col>{this.makeCard(data,this.getCardColor(data.level))}</Col>
-                    )} */}
-                </Row>
-                
+            <React.Fragment>      
                 {/* 페이지 수가 1개 이상일 경우에만 페이지네이션 보이기 */}
-                {this.pagesCount<=1?null:<div className="pagination-wrapper"> 
+                {this.pagesCount<=1?<div className="pagination-wrapper"></div>:<div className="pagination-wrapper"> 
                     <Pagination aria-label="Page navigation">
                         {/* prev */}
                         <PaginationItem disabled={currentPage <= 0}>
@@ -117,6 +97,32 @@ export default class SkillTabs extends Component{
                         </PaginationItem>
                     </Pagination>
                 </div> }
+
+
+                {/* <Row flex="true">
+                    {this.dataSet
+                        .slice(
+                            currentPage * this.pageSize,
+                            (currentPage + 1) * this.pageSize
+                        )
+                        .map((data, i) =>
+                                <Col md="3" className="card-col">{this.makeCard(data,this.getCardColor(data.level))}</Col>
+                                
+                        )}
+                </Row> */}
+                <CardDeck>
+                    {this.dataSet
+                        .slice(
+                            currentPage * this.pageSize,
+                            (currentPage + 1) * this.pageSize
+                        )
+                        .map((data, i) =>
+                                this.makeCard(data,this.getCardColor(data.level))
+                                
+                        )}
+                </CardDeck>
+                
+                
                 
             </React.Fragment>
         )
