@@ -4,13 +4,24 @@
     display:inline-block;
 } */
 
+.page-header{
+    text-align:center;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
 .page-title{
-    font-size: 30pt;
+    display: inline-block;
+    width:25rem;
+    margin:0 auto;
+    font-size: 2.5rem;
     color:#444649;
 }
 
 .page-title-bar{
-    width: 70px;
-    height: 4px;
+    display: inline-block;
+    margin: 0 auto;
+    width: 5.5vw;
+    height: 0.5vh;
     background: #444649;
 }

@@ -102,7 +102,7 @@ export default class Skills extends Component{
             level:1,
             tag:["DB/Server"],
             imgName:"aws-logo.png",
-            description:["다수 프로젝트에서 사용 경험","EC2","RDS"]
+            description:["EC2, RDS 사용 경험"]
         }
     ]
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Element} from 'react-scroll';
 import { Container, Row, Col,Button, Form, FormGroup, Label, Input, FormText} from "reactstrap";
+import '../../../static/css/page-header.css';
 
 export default class Contact extends Component{
     
@@ -12,10 +13,10 @@ export default class Contact extends Component{
     render(){
         return(
             <Element name="contact" className="element" style={this.divStyle}>
-                <Container fluid>
                     <Row>
                         <Col className="page-header">
-                            <h1>CONTACT</h1>
+                            <h1 className="page-title">CONTACT</h1><br/>
+                            <div className="page-title-bar center-block"></div>
                         </Col>
                     </Row>
                     <Row>
@@ -51,7 +52,6 @@ export default class Contact extends Component{
                             </Form>
                         </Col>
                     </Row>
-                </Container>
             </Element>
         )
     }

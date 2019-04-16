@@ -8,7 +8,7 @@ export default class Intro extends Component{
     render(){
         return(
             <div className="intro-wrapper">
-                <p>
+                <p className="text-center">
                     안녕하세요. <br/>
                     신입 백엔드 개발자 신윤호입니다.<br/>
                     백엔드 개발에 흥미를 가지고 컴퓨터공학과에 편입하여 본격적으로 개발을 시작했으며<br/>

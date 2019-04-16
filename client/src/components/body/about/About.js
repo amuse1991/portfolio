@@ -19,11 +19,10 @@ export default class About extends Component{
     render(){
         return(
             <Element name="about" className="element" style={this.divStyle}>
-                <Container fluid>
                     <Row>
                         <Col className="page-header">
-                            <h1 className="page-title">ABOUT</h1>
-                            <div className="page-title-bar"></div>
+                            <h1 className="page-title">ABOUT</h1><br/>
+                            <div className="page-title-bar center-block"></div>
                         </Col>
                     </Row>
                     <Row>
@@ -38,7 +37,6 @@ export default class About extends Component{
                         <Col className="keywords">
                         </Col>
                     </Row>
-                </Container>
             </Element>
             
         )
