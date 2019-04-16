@@ -26,11 +26,14 @@ export default class About extends Component{
                         </Col>
                     </Row>
                     <Row>
-                        <Col className="profile">
-                        </Col>
-                        <Col className="skills">
-                            <Skills/>
-                        </Col>
+                        <Row>
+                            <p>테스트</p>
+                        </Row>
+                        <Row>
+                            <Col className="skills">
+                                <Skills/>
+                            </Col>
+                        </Row>
                     </Row>
                     <Row>
                         <Col className="keywords">

@@ -3,6 +3,8 @@ import { Card, CardImg, CardText, CardBody, CardTitle, Button,  TabContent, TabP
 import classnames from 'classnames'
 import '../../../static/css/card.css'
 
+import SkillTab from "./SkillTab";
+
 export default class Skills extends Component{
     
     javaSkills = [
@@ -10,20 +12,20 @@ export default class Skills extends Component{
             title:"Java",
             level:3,
             imgName:"java-logo.png",
-            tag:"Spring",
+            tag:["Spring"],
             description:["가장 자신있는 언어", "대학 생활을 함께한 언어"]
         },
         {
             title:"Spring MVC",
             level:1,
-            tag:"Spring",
+            tag:["Spring"],
             imgName:"spring-logo.png",
             description:["팀 프로젝트 경험","관련 교육 이수"]
         },
         {
             title:"Spring Boot",
             level:2,
-            tag:"Spring",
+            tag:["Spring"],
             imgName:"springboot-logo.png",
             description:["개인 프로젝트 경험", "관련 스터디 참여중"]
         }
@@ -33,21 +35,21 @@ export default class Skills extends Component{
         {
             title:"JavaScript(ES6)",
             level:2,
-            tag:"Node.js",
+            tag:["Node.js"],
             imgName:"js-logo.png",
             description:["졸업 프로젝트 경험"]
         },
         {
             title:"Node.js",
             level:2,
-            tag:"Node.js",
+            tag:["Node.js"],
             imgName:"nodejs-logo.png",
             description:["졸업 프로젝트 경험", "express를 이용한 서버 구축 경험", "웹 소켓 사용 경험"]
         },
         {
             title:"React.js",
             level:2,
-            tag:"Node.js",
+            tag:["Node.js"],
             imgName:"react-logo.png",
             description:["졸업 프로젝트 경험","현재 포트폴리오에 사용"]
         }
@@ -56,62 +58,82 @@ export default class Skills extends Component{
     pythonSkills = [
         {
             title:"Python",
-            imgName:"",
+            level:2,
+            tag:["Others"],
+            imgName:"python-logo.png",
             description:["네트워크 프로그래밍 경험","토이 프로젝트에 자주 사용"]
         }
     ]
 
-    dotNetSkills = [
-        {
-            title:"C#",
-            imgName:"",
-            description:["인턴쉽 경험"]
-        },
-        {
-            title:".NET MVC5",
-            imgName:"",
-            description:["인턴쉽 경험"]
-        }
-    ]
+    // dotNetSkills = [
+    //     {
+    //         title:"C#",
+    //         level:1,
+    //         tag:"Django/.NET MVC",
+    //         imgName:"",
+    //         description:["인턴쉽 경험"]
+    //     },
+    //     {
+    //         title:".NET MVC5",
+    //         level:1,
+    //         tag:"Django/.NET MVC",
+    //         imgName:"",
+    //         description:["인턴쉽 경험"]
+    //     }
+    // ]
 
     dbSkills = [
         {
             title:"MySQL",
-            imgName:"",
+            level:2,
+            tag:["DB/Server"],
+            imgName:"mysql-logo.png",
             description:["개인 프로젝트 진행 경험"]
         },
         {
             title:"SQL Server",
-            imgName:"",
+            level:2,
+            tag:["DB/Server"],
+            imgName:"sqlserver-logo.png",
             description:["졸업 프로젝트 진행 경험"]
+        },
+        {
+            title:"AWS",
+            level:1,
+            tag:["DB/Server"],
+            imgName:"aws-logo.png",
+            description:["다수 프로젝트에서 사용 경험","EC2","RDS"]
         }
     ]
 
     otherSkills = [
         {
             title:"git",
-            imgName:"",
+            level:2,
+            tag:["Others"],
+            imgName:"git-logo.png",
             description:["다수 프로젝트에서 사용"]
         },
         {
             title:"JIRA",
-            imgName:"",
+            level:1,
+            tag:["Others"],
+            imgName:"jira-logo.png",
             description:["인턴쉽 수행 중 사용"]
         },
         {
-            title:"Unit Test",
-            imgName:"",
+            title:"Unit Test(Junit)",
+            level:1,
+            tag:["Spring","Others"],
+            imgName:"junit-logo.png",
             description:["개인 프로젝트에 사용 경험","TDD를 하는 개발자가 되기 위해 꾸준히 학습중"]
         },
         {
             title:"REST API 설계",
-            imgName:"",
+            level:1,
+            tag:["Others"],
+            imgName:"rest-logo.png",
             description:["개인 프로젝트에서 수행 경험","관심을 가지고 학습중"]
-        },
-        {
-            title:"AWS",
-            imgName:"",
-            description:["다수 프로젝트에서 사용 경험","EC2","RDS"]
         }
     ]
 
@@ -120,7 +142,7 @@ export default class Skills extends Component{
         this.colCount = 0
         this.rowCount = 0
         this.maxCol = 5
-        this.tags = ['ALL','Spring','Node.js','DB','Others']
+        this.tags = ['ALL','Spring','Node.js','DB/Server','Others']
         this.state = {
           activeTab: 'ALL'
         };
@@ -133,38 +155,6 @@ export default class Skills extends Component{
           });
         }
       }
-
-      
-    getCardColor = (level)=>{
-        switch(level){
-            case 3:
-                return "primary"
-            case 2:
-                return "info"
-            case 1:
-                return "warning"
-        }
-    }
-
-    makeCard = (cardData, color)=>{
-        if(color==undefined){
-            color = "primary"
-        }
-
-        const imageContext = require.context('../../../../public/icons', true);
-        let imageSrc = imageContext(`./${cardData.imgName}`)
-
-        return(
-            <Card body outline className="text-center" color={color}>
-                {/* 이미지가 정상적으로 로드된 경우에만 이미지 표시 */}
-                {imageSrc==undefined?null:<CardImg width="15%" height="auto" top src={imageSrc}/>} 
-                <CardTitle>{cardData.title}</CardTitle>
-                {cardData.description.map((descItem)=>
-                    descItem==undefined?null:<CardText>{descItem}</CardText>
-                )}
-            </Card>
-        )
-    }
 
     makeTabNav = ()=>{
         return(
@@ -186,43 +176,28 @@ export default class Skills extends Component{
     }
 
     makeTabContent = (contentData)=>{
-        let springData = contentData.filter(item=>item["tag"] === "Spring")
-        let nodeData = contentData.filter(item=>item["tag"] === "Node.js")
+        // 데이터의 tag 배열에 해당하는 기술이 있는 것들을 필터링한다.
+        let springData = contentData.filter(item=>item["tag"].some(el=>el ==="Spring"))
+        let nodeData = contentData.filter(item=>item["tag"].some(el=>el ==="Node.js"))
+        let dbAndServerData = contentData.filter(item=>item["tag"].some(el=>el === "DB/Server"))
+        let otherData = contentData.filter(item=>item["tag"].some(el=>el === "Others"))
 
         return(
             <TabContent activeTab={this.state.activeTab}>
                 <TabPane tabId="ALL">
-                    <Row>
-                        {contentData.map((content)=>{
-                            let color = this.getCardColor(content.level)
-                            return(
-                                    <Col>{this.makeCard(content,color)}</Col>
-                                
-                            )
-                        })}
-                    </Row>
+                    <SkillTab skills={contentData}/>
                 </TabPane>
                 <TabPane tabId="Spring">
-                    <Row>
-                        {springData.map((content)=>{
-                            let color = this.getCardColor(content.level)
-                            return(
-                                    <Col>{this.makeCard(content,color)}</Col>
-                                
-                            )
-                        })}
-                    </Row>
+                    <SkillTab skills={springData}/>
                 </TabPane>
                 <TabPane tabId="Node.js">
-                    <Row>
-                        {nodeData.map((content)=>{
-                            let color = this.getCardColor(content.level)
-                            return(
-                                    <Col>{this.makeCard(content,color)}</Col>
-                                
-                            )
-                        })}
-                    </Row>
+                    <SkillTab skills={nodeData}/>
+                </TabPane>
+                <TabPane tabId="DB/Server">
+                    <SkillTab skills={dbAndServerData}/>
+                </TabPane>
+                <TabPane tabId="Others">
+                    <SkillTab skills={otherData}/>
                 </TabPane>
             </TabContent>
         )   
@@ -230,7 +205,11 @@ export default class Skills extends Component{
 
 
     render(){
-        let skills = this.javaSkills.concat(this.javaScriptSkills)
+        let skills = this.javaSkills
+                        .concat(this.javaScriptSkills)
+                        .concat(this.dbSkills)
+                        .concat(this.pythonSkills)
+                        .concat(this.otherSkills)
         return(
             <div>
                 {this.makeTabNav()}
