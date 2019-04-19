@@ -33,10 +33,6 @@ export default class About extends Component{
                             <Skills/>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col className="keywords">
-                        </Col>
-                    </Row>
             </Element>
             
         )
