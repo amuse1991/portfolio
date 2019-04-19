@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import ProjectCarousel from "./ProjectCarousel";
-import Sidebar from "./Sidebar";
+import ProjectNav from "./ProjectNav";
 import Description from "./Description";
 import '../../../static/css/project-modal.css';
 
@@ -26,16 +26,14 @@ export default class ModalContent extends Component{
         const {modalContent} = this.props
         return(
             <div className="modal-wrapper">
+            <ProjectNav title={modalContent.name}/>
                 <Row>
-                    <Col className="title-wrapper">
+                    <Col className="project-header">
                         <h1 className="title">{modalContent.name}</h1>
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm="3">
-                        <Sidebar/>
-                    </Col>
-                    <Col sm="9">
+                    <Col>
                         <ProjectCarousel dataSet={this.makeCarouselDataSet(modalContent.imgs)}/>
                         <Description dataSet={modalContent}/>
                     </Col>

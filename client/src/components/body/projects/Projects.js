@@ -5,6 +5,7 @@ import { Card, Button, CardHeader, CardFooter, CardDeck, CardImg, CardSubtitle, 
 import Modal from 'react-responsive-modal';
 import ModalContent from "./ModalContent";
 import '../../../static/css/page-header.css';
+import modalStyles from'../../../static/css/project-modal.css';
 
 export default class Projects extends Component{
 
@@ -249,7 +250,7 @@ export default class Projects extends Component{
                                         )
                                 }
                             </CardDeck>
-                            <Modal open={open} onClose={this.onCloseModal}>
+                            <Modal open={open} onClose={this.onCloseModal} modalId="project-modal" overlayId="project-modal-overlay" >
                                 {modalContent==undefined?null:<ModalContent modalContent={modalContent}/>}
                             </Modal>
                         </Col>

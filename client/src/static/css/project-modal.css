@@ -1,0 +1,7 @@
+#project-modal-overlay{
+    z-index: 1050;
+}
+
+#project-modal{
+    margin-top:10vh;
+}
