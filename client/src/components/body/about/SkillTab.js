@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Card, CardImg, CardText, CardBody, CardDeck, CardGroup, CardColumns, CardTitle, Button,  TabContent, TabPane, Nav, NavItem, NavLink, Row, Col,Pagination, PaginationItem, PaginationLink } from 'reactstrap'
 import classnames from 'classnames'
-import '../../../static/css/card.css'
+import '../../../static/css/skills.css'
 
 export default class SkillTabs extends Component{
     
@@ -12,7 +12,7 @@ export default class SkillTabs extends Component{
     
         this.dataSet = this.props.skills
     
-        this.pageSize = 3; // 페이지당 최대 아이템 개수
+        this.pageSize = 6; // 페이지당 최대 아이템 개수
         this.pagesCount = Math.ceil(this.dataSet.length / this.pageSize); //총 페이지 개수
         this.rowSize = Math.ceil(this.pageSize/2) // 한 Row 당 최대 아이템 개수
     
@@ -50,12 +50,12 @@ export default class SkillTabs extends Component{
         let imageSrc = imageContext(`./${cardData.imgName}`)
 
         return(
-            <Card body outline className="text-center" color={color} >
+            <Card body outline className="text-center skill-card" color={color} >
                 {/* 이미지가 정상적으로 로드된 경우에만 이미지 표시 */}
                 {imageSrc==undefined?null:<CardImg top src={imageSrc}/>} 
-                <CardTitle>{cardData.title}</CardTitle>
+                <CardTitle className="skill-card-title">{cardData.title}</CardTitle>
                 {cardData.description.map((descItem)=>
-                    descItem==undefined?null:<CardText>{descItem}</CardText>
+                    descItem==undefined?null:<CardText className="skill-card-text">{descItem}</CardText>
                 )}
             </Card>
         )
@@ -65,10 +65,10 @@ export default class SkillTabs extends Component{
         const { currentPage } = this.state;
         
         return(
-            <React.Fragment>      
-                {/* 페이지 수가 1개 이상일 경우에만 페이지네이션 보이기 */}
-                {this.pagesCount<=1?<div className="pagination-wrapper"></div>:<div className="pagination-wrapper"> 
-                    <Pagination aria-label="Page navigation">
+            <React.Fragment>
+                {/* 페이지 수가 1개 이하일 경우 visibility:hidden */}
+                <div className="pagination-wrapper" style={this.pagesCount<=1?{visibility:"hidden"}:{visibility:"visible"}}> 
+                    <Pagination size="sm" aria-label="Page navigation" className="skills-pagination">
                         {/* prev */}
                         <PaginationItem disabled={currentPage <= 0}>
                         <PaginationLink
@@ -96,7 +96,7 @@ export default class SkillTabs extends Component{
                             />
                         </PaginationItem>
                     </Pagination>
-                </div> }
+                </div>
 
 
                 {/* <Row flex="true">
@@ -110,7 +110,7 @@ export default class SkillTabs extends Component{
                                 
                         )}
                 </Row> */}
-                <CardDeck>
+                <CardDeck className="skill-card-deck">
                     {this.dataSet
                         .slice(
                             currentPage * this.pageSize,
@@ -120,7 +120,8 @@ export default class SkillTabs extends Component{
                                 this.makeCard(data,this.getCardColor(data.level))
                                 
                         )}
-                </CardDeck>
+                </CardDeck>    
+                
                 
                 
                 

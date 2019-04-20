@@ -2,3 +2,10 @@
     color:#7829FE;
     font-weight: bold;
 }
+
+.intro-text{
+    font-size: 1rem;
+    line-height: 200%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+

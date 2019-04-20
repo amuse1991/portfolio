@@ -1,6 +1,13 @@
-/* 
+.pagination-wrapper{
+    text-align:center;
+    margin:0 auto;
+}
+.skills-pagination{
+    margin-top:2vh;
+    display: inline-block;
+}
 .skill-card{
-    flex: 0 0 25%!important;
+    flex: 0 0 28%!important;
     margin-bottom: 1.5vh!important;
     font-family: 'Nanum Gothic', sans-serif;
     font-size:0.9rem;
@@ -19,4 +26,4 @@
 
 .skill-card-text{
     margin-bottom: 0.5rem;
-} */
+}
