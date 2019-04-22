@@ -13,38 +13,13 @@ export default class Main extends Component{
         return(
             <Container fluid>
                 {/* header */}
-                <Row className="header">
-                    <Col>
-                        <Header/>
-                    </Col>
-                </Row>
+                <Header/>
                 {/* body */}
-                <Row className="body home">
-                    <Col>
-                        <Home/>
-                    </Col>
-                </Row>
-                <Row className="body profile">
-                    <Col>
-                        <About/>
-                    </Col>
-                </Row>
-                <Row className="body projects">
-                    <Col>
-                        <Projects/>
-                    </Col>
-                </Row>
-                <Row className="body contact">
-                    <Col>
-                        <Contact/>
-                    </Col>
-                </Row>
-                {/* footer */}
-                <Row className="footer">
-                    <Col>
-                    </Col>
-                </Row>
-      </Container>
+                <Home/>
+                <About/>
+                <Projects/>
+                <Contact/>
+            </Container>
         )
     }
 }

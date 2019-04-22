@@ -28,11 +28,6 @@ export default class Projects extends Component{
         this.setState({ open: false });
     };
 
-    divStyle = {
-        width:'100%',
-        height:'100vh'
-    };
-
     projectDataSet = [
         {  
             "id":"portfolio01",
@@ -293,7 +288,7 @@ export default class Projects extends Component{
         const imageContext = require.context('../../../../public/projects', true);
         return(
             <Element name="projects" className="element">
-                <div style={this.divStyle}>
+                <div>
                     <Row>
                         <Col className="page-header">
                             <h1 className="page-title">PROJECTS</h1><br/>
@@ -302,25 +297,25 @@ export default class Projects extends Component{
                     </Row>
                     <Row>
                         <Col>
-                            <CardColumns>
+                            <CardDeck className="project-card-deck">
                                 {
                                     this.projectDataSet.map(project=>
-                                            <Card>
-                                                <CardHeader className="text-center">{project.name}</CardHeader>
-                                                <CardImg top width="100%" src={imageContext(`./${project.mainImgName}`)} alt="project main image" />
+                                            <Card className="project-card">
+                                                <CardHeader className="text-center project-card-header">{project.name}</CardHeader>
+                                                <CardImg top className="project-card-img" src={imageContext(`./${project.mainImgName}`)} alt="project main image" />
                                                 <CardBody className="text-center">
                                                     <CardTitle>
                                                     {project.tags.map(tag=>
-                                                        <Badge color="primary">{tag}</Badge>
+                                                        <Badge className="project-card-tag" color="primary">{tag}</Badge>
                                                         )}
                                                     </CardTitle>
-                                                    <CardText>{project.summary}</CardText>
-                                                    <Button onClick={()=>this.onOpenModal(project.id)}>LEARN MORE</Button>
+                                                    <CardText className="project-card-text">{project.summary}</CardText>
+                                                    <Button className="project-card-btn" outline color="primary"  onClick={()=>this.onOpenModal(project.id)}>LEARN MORE</Button>
                                                 </CardBody>
                                             </Card>
                                         )
                                 }
-                            </CardColumns>
+                            </CardDeck>
                             <Modal open={open} onClose={this.onCloseModal} modalId="project-modal" overlayId="project-modal-overlay" >
                                 {modalContent==undefined?null:<ModalContent modalContent={modalContent}/>}
                             </Modal>

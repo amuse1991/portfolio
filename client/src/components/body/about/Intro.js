@@ -7,7 +7,7 @@ export default class Intro extends Component{
 
     render(){
         return(
-            <div className="intro-wrapper">
+            <React.Fragment className="intro-wrapper">
                 <p className="text-center intro-text">
                     안녕하세요. <br/>
                     신입 백엔드 개발자 신윤호입니다.<br/>
@@ -20,8 +20,8 @@ export default class Intro extends Component{
                     를 진행했으며, 
                     <span id="popover-personal-project" className="popover-span">개인 프로젝트</span>
                     또한 진행했습니다.<br/>
+                    저는 개발자로써 다음과 같은 가치관과 역량을 지니고 있습니다. <br/>
                     <br/>
-                    저는 개발자로써 다음과 같은 가치관과 역량을 지니고 있습니다. 
                 </p>
                 <Keywords title="Can-Do Attitude"/>
                 <Keywords title="Responsible"/>
@@ -29,18 +29,31 @@ export default class Intro extends Component{
                 <Keywords title="Cooperative"/>
 
                 <UncontrolledTooltip placement="top" target="popover-related-class">
-                    1
+                    <span>
+                        웹 프로그래밍 <br/>
+                        모바일 소프트웨어 설계 <br/>
+                        데이터베이스 <br/>
+                        컴퓨터 네트워크 <br/>
+                        분산처리 <br/>
+                        시스템 및 네트워크 보안 <br/>
+                    </span>
                 </UncontrolledTooltip>
                 <UncontrolledTooltip placement="top" target="popover-internship">
-                    2
+                    <span>
+                        사내 업무 평가 관리 웹 어플리케이션 개발 
+                    </span>
                 </UncontrolledTooltip>
                 <UncontrolledTooltip placement="top" target="popover-graduation-project">
-                    3
+                    <span>
+                        인공위성 관제 모니터링 웹 서비스 개발 
+                    </span>
                 </UncontrolledTooltip>
                 <UncontrolledTooltip placement="top" target="popover-personal-project">
-                    4
+                    <span>
+                        Study Time 개발
+                    </span>
                 </UncontrolledTooltip>
-            </div>
+            </React.Fragment>
         );
     }
 }

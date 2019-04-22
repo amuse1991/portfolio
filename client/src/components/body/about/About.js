@@ -11,14 +11,10 @@ import Skills from "./Skills";
 import Intro from "./Intro";
 
 export default class About extends Component{
-    divStyle = {
-        width:'100%',
-        height:'100vh',
-    };
 
     render(){
         return(
-            <Element name="about" className="element" style={this.divStyle}>
+            <Element name="about" className="element">
                     <Row>
                         <Col className="page-header">
                             <h1 className="page-title">ABOUT</h1><br/>

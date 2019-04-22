@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {Element} from 'react-scroll';
 import { Container, Row, Col,Button, Form, FormGroup, Label, Input, FormText} from "reactstrap";
+import ContactItem from "./ContactItem"
 import '../../../static/css/page-header.css';
+import "../../../static/css/contact.css"
 
 export default class Contact extends Component{
     
@@ -9,7 +11,6 @@ export default class Contact extends Component{
         width:'100%',
         height:'100vh'
     };
-
     render(){
         return(
             <Element name="contact" className="element" style={this.divStyle}>
@@ -21,13 +22,10 @@ export default class Contact extends Component{
                     </Row>
                     <Row>
                         <Col>
-                            <ul>
-                                <li>mobile<br/>010-6258-1441 </li>
-                                <li>Email<br/>amuse1991@gmail.com</li>
-                                <li>kakao<br/>estrella917@naver.com</li>
-                                <li>blog<br/>https://yoonho-devlog.tistory.com/</li>
-                                <li>github<br/>https://github.com/amuse1991</li>
-                            </ul>
+                            <ContactItem title="Mobile" imgName="smartphone.png" content="010-6258-1441"/>
+                            <ContactItem title="Email" imgName="email.png" content="amuse1991@gmail.com"/>
+                            <ContactItem title="Blog" imgName="tistory.svg" content="https://yoonho-devlog.tistory.com"/>
+                            <ContactItem title="Github" imgName="github-logo.svg" content="https://github.com/amuse1991"/>
                         </Col>
                         <Col>
                             <h6>궁금한 점이 있으신가요?</h6>

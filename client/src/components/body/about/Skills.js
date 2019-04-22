@@ -211,10 +211,10 @@ export default class Skills extends Component{
                         .concat(this.pythonSkills)
                         .concat(this.otherSkills)
         return(
-            <div>
+            <React.Fragment>
                 {this.makeTabNav()}
                 {this.makeTabContent(skills)}
-            </div>
+            </React.Fragment>
 
             
         );
