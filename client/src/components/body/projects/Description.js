@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Button, Table, CardBody, Card} from "reactstrap";
+import "../../../static/css/project.css"
 export default class Description extends Component{
     render(){
         const {dataSet} = this.props
@@ -8,6 +9,7 @@ export default class Description extends Component{
                 <div>
                     <h3>프로젝트 개요</h3>
                     <p>프로젝트 기간 {dataSet.startDate} ~ {dataSet.endDate}</p>
+                    <p>{dataSet.description}</p>
                 </div>
                 <div>
                     <h3>개발 환경</h3>
@@ -34,7 +36,7 @@ export default class Description extends Component{
                         dataSet.contribution.map((role,idx)=>
                                 <figure key={idx}>
                                     <figcaption>
-                                        <p>{role.part}</p>
+                                        <h5>{role.part}</h5>
                                         <p>{role.summary}</p>
                                         <ul>
                                             {role.workList.map((item,i)=>
@@ -47,13 +49,13 @@ export default class Description extends Component{
                         }
                 </div>
                 <div>
-                    <h3>프로젝트 상세</h3>
+                    <h3>개발 내용 상세</h3>
                 </div>
                 <div>
-                    <h3>프로젝트 결과</h3>
-                </div>
-                <div>
-                    <h3>결과 자료</h3>
+                    <h3>관련 자료 및 링크</h3>
+                    {dataSet.links == undefined?null:dataSet.links.map(linkItem=>
+                        <Button outline className={"project-link-btn"} color="primary" onClick={()=>window.open(linkItem.link)}>{linkItem.title}</Button>
+                    )}
                 </div>
             </React.Fragment>
         )

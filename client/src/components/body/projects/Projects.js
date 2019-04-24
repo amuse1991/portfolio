@@ -30,97 +30,26 @@ export default class Projects extends Component{
 
     projectDataSet = [
         {  
-            "id":"portfolio01",
-            "name":"Study time",
-            "mainImgName":"p1.png",
-            "tags":["Spring boot","Android"],
-            "startDate":"2019.03",
-            "endDate":"2019.05",
-            "summary":"Spring boot, Android 스터디에서 진행한 프로젝트입니다. ",
-            "imgs":[
-                {
-                    "imgName":"p1.png",
-                    "caption":"위성 위치 정보 도시 화면"
-                }
-                ,{
-                    "imgName":"p2.png",
-                    "caption":"위성 데이터 조회 화면1"
-                },{
-                    "imgName":"p3.png",
-                    "caption":"위성 데이터 조회 화면2"
-                }],
-            "git":"https://github.com/amuse1991/SIMS",
-            "demo":"https://www.youtube.com/watch?v=QaJRSSwJtpw&t=4s",
-            "skills":{
-                "language":{
-                    "data" : ["javascript"],
-                    "isContributed":false
-                }
-                    ,
-                "front-end framework":{
-                    "data" : ["React.js"],
-                    "isContributed":true
-                },
-                "back-end framework" : {
-                    "data": ["Node.js, Express"],
-                    "isContributed":true
-                },
-                "server": {
-                    "data": ["Ubuntu 16.04(AWS EC2)"],
-                    "isContributed":false
-                },
-                "DB":{
-                    "data" : ["SQL Server 2017(AWS RDS)"],
-                    "isContributed":false
-                },
-                "others":{
-                    "data" : ["git, trello"],
-                    "isContributed":true
-                }
-            },
-            "contribution":[
-                {
-                    "part" : "프론트엔드 개발",
-                    "summary" : "React.js를 이용하여 SPA 형태로 프론트엔드를 구현했습니다.",
-                    "workList": [
-                        "ajax를 통한 프론트엔드와 백엔드 연동",
-                        "위치 정보 도시 컴포넌트 구현",
-                        "DB 데이터 차트화 컴포넌트 구현",
-                        "소켓 통신 데이터 차트화 컴포넌트 구현"
-                    ]
-                },
-                {
-                    "part" : "백엔드 개발",
-                    "summary" : "Node.js를 이용하여 RESTful API 서버를 구현했습니다.",
-                    "workList": [
-                        "DB access API 구현", 
-                        "web socket을 이용한 소켓 통신 구현",
-                        "client-server API 구현"
-                    ]
-                }]
-        },
-        {  
             "id":"portfolio02",
             "name":"인공위성 관제 모니터링 웹 서비스 구성",
-            "mainImgName":"p1.png",
+            "mainImgName":"p1_1.png",
             "tags":["node.js","exprss","react.js"],
             "startDate":"2018.03",
             "endDate":"2018.12",
             "summary":"(주)쎄트렉아이와 진행한 산학 협력 프로젝트입니다. Node.js, React.js를 이용해 위성 정보를 웹 상에서 모니터링 할 수 있는 서비스를 개발했습니다.",
+            "description":"위성이 전달하는 위성 상태 정보 및 계측 정보를 도시하는 웹 어플리케이션을 개발했습니다. 본 프로젝트에서 저는 React.js와 Node.js 개발을 수행했습니다. 프로젝트 진행 중 팀원 한명이 개인 사정으로 중도하차 하였지만 오히려 그로 인해 javascript 기반의 풀스택 개발을 경험할 수 있었습니다.",
             "imgs":[
                 {
-                    "imgName":"p1.png",
+                    "imgName":"p1_1.png",
                     "caption":"위성 위치 정보 도시 화면"
                 }
                 ,{
-                    "imgName":"p2.png",
+                    "imgName":"p1_2.png",
                     "caption":"위성 데이터 조회 화면1"
                 },{
-                    "imgName":"p3.png",
+                    "imgName":"p1_3.png",
                     "caption":"위성 데이터 조회 화면2"
                 }],
-            "git":"https://github.com/amuse1991/SIMS",
-            "demo":"https://www.youtube.com/watch?v=QaJRSSwJtpw&t=4s",
             "skills":{
                 "language":{
                     "data" : ["javascript"],
@@ -150,24 +79,47 @@ export default class Projects extends Component{
             },
             "contribution":[
                 {
-                    "part" : "프론트엔드 개발",
-                    "summary" : "React.js를 이용하여 SPA 형태로 프론트엔드를 구현했습니다.",
+                    "part" : "백엔드 개발",
+                    "summary" : "Node.js와 Express를 이용한 백엔드 서버를 구현했습니다.",
                     "workList": [
-                        "ajax를 통한 프론트엔드와 백엔드 연동",
-                        "위치 정보 도시 컴포넌트 구현",
-                        "DB 데이터 차트화 컴포넌트 구현",
-                        "소켓 통신 데이터 차트화 컴포넌트 구현"
+                        "Web API구현", 
+                        "Web socket을 이용한 통신 구현"
                     ]
                 },
                 {
-                    "part" : "백엔드 개발",
-                    "summary" : "Node.js를 이용하여 RESTful API 서버를 구현했습니다.",
+                    "part" : "프론트엔드 개발",
+                    "summary" : "React.js를 이용하여 Single page application(SPA)형태로 프론트엔드를 구현했습니다.",
                     "workList": [
-                        "DB access API 구현", 
-                        "web socket을 이용한 소켓 통신 구현",
-                        "client-server API 구현"
+                        "ajax를 통한 프론트엔드와 백엔드 연동",
+                        "Google Map을 이용한 위치 정보 도시 컴포넌트 구현",
+                        "DB 데이터 차트화 컴포넌트 구현",
+                        "소켓 통신 데이터 차트화 컴포넌트 구현"
                     ]
-                }]
+                }
+            ],
+            "details":[
+                {
+                    "group":"프론트엔드 구현",
+                    "title":"SPA 형태의 웹 페이지 구현",
+                    "description":"React.js를 사용함으로써 페이지에 변동이 발생했을 때, 새로운 페이지를 불러오는 대신 변화가 발생한 부분만 다시 작성하도록 했습니다. 한편, 각 페이지는 위치 해시를 이용해 논리적으로 구분했으며, 이는 react-router-dom 모듈의 HashRouter를 이용해 구현했습니다.",
+                    "imges":[
+                        {
+                            "imgName":"",
+                            "caption":""
+                        }
+                    ]
+                }
+            ],
+            "links":[
+                {
+                    "title":"github",
+                    "link":"https://github.com/amuse1991/SIMS"
+                },
+                {
+                    "title":"demo",
+                    "link":"https://www.youtube.com/watch?v=QaJRSSwJtpw&t=4s"
+                }
+            ]
         },
         {  
             "id":"portfolio03",
