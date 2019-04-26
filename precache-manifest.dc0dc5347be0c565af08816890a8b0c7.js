@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/038-magnifying-glass.fdf11f88.png"
   },
   {
-    "revision": "48c539be5d527f587ea9",
+    "revision": "91127b040096e72f03a9",
     "url": "/portfolio/static/css/main.fc4b6cf0.chunk.css"
   },
   {
@@ -176,8 +176,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/037-placeholder.662748e2.png"
   },
   {
-    "revision": "48c539be5d527f587ea9",
-    "url": "/portfolio/static/js/main.48c539be.chunk.js"
+    "revision": "91127b040096e72f03a9",
+    "url": "/portfolio/static/js/main.91127b04.chunk.js"
   },
   {
     "revision": "d4fb9bb71006c63a78668706b3d6946c",
@@ -352,7 +352,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/css/1.e0f97a72.chunk.css"
   },
   {
-    "revision": "897cb928532e11b5287fcef9ab2ecb0c",
+    "revision": "283a7e8e5af8a05247c6945a81529ad9",
     "url": "/portfolio/index.html"
   }
 ];
