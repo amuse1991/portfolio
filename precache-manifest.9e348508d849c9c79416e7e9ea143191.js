@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "455561b6cfda7349b6801481d90e352c",
-    "url": "/portfolio/static/media/034-motivation.455561b6.png"
+    "revision": "fdf11f888f08181027507c3dcf1128a1",
+    "url": "/portfolio/static/media/038-magnifying-glass.fdf11f88.png"
   },
   {
-    "revision": "a63c65f212c53d266150",
-    "url": "/portfolio/static/css/main.0db6ca34.chunk.css"
+    "revision": "48c539be5d527f587ea9",
+    "url": "/portfolio/static/css/main.fc4b6cf0.chunk.css"
   },
   {
-    "revision": "1938a54c3c6fd773a8db09b2b4ccc1fd",
-    "url": "/portfolio/static/media/p3_1.1938a54c.png"
+    "revision": "06649dfcb6272a59b1eb172dde9233f0",
+    "url": "/portfolio/static/media/studyTime_3.06649dfc.PNG"
   },
   {
-    "revision": "9cd294c7f9f5e15338d3",
-    "url": "/portfolio/static/js/1.9cd294c7.chunk.js"
+    "revision": "4f97165561f4f0a7fcfb",
+    "url": "/portfolio/static/js/1.4f971655.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -160,8 +160,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/033-gear.fc96ef07.png"
   },
   {
-    "revision": "a63c65f212c53d266150",
-    "url": "/portfolio/static/js/main.a63c65f2.chunk.js"
+    "revision": "455561b6cfda7349b6801481d90e352c",
+    "url": "/portfolio/static/media/034-motivation.455561b6.png"
   },
   {
     "revision": "3cb15f341623cb89d5963636e1f393fe",
@@ -176,8 +176,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/037-placeholder.662748e2.png"
   },
   {
-    "revision": "fdf11f888f08181027507c3dcf1128a1",
-    "url": "/portfolio/static/media/038-magnifying-glass.fdf11f88.png"
+    "revision": "48c539be5d527f587ea9",
+    "url": "/portfolio/static/js/main.48c539be.chunk.js"
   },
   {
     "revision": "d4fb9bb71006c63a78668706b3d6946c",
@@ -264,16 +264,44 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/sqlserver-logo.b25bae44.png"
   },
   {
-    "revision": "895df8b8dc1fbda429e4d68249efbdf7",
-    "url": "/portfolio/static/media/p1_1.895df8b8.png"
+    "revision": "f8ed3da0abfece5e638d3fab15000fa3",
+    "url": "/portfolio/static/media/blackjack_1.f8ed3da0.png"
   },
   {
-    "revision": "6df4e223c7595e5f1296bd2bba67d7c6",
-    "url": "/portfolio/static/media/p1_2.6df4e223.png"
+    "revision": "0bebaab1d2d66cd2f4d2b35357b38df3",
+    "url": "/portfolio/static/media/blackjack_2.0bebaab1.png"
   },
   {
-    "revision": "b9ba4eb2785a274b6e3323d4a7a06bf2",
-    "url": "/portfolio/static/media/p1_3.b9ba4eb2.png"
+    "revision": "9c56f59551d8b337af5116185fdb48ee",
+    "url": "/portfolio/static/media/blackjack_3.9c56f595.png"
+  },
+  {
+    "revision": "935acc68e835875597281a03bc446b57",
+    "url": "/portfolio/static/media/blackjack_4.935acc68.png"
+  },
+  {
+    "revision": "809a3895f12f728bc9377a6d297e4782",
+    "url": "/portfolio/static/media/blackjack_github.809a3895.PNG"
+  },
+  {
+    "revision": "920002592bf7f6189ad665ba3f575ee1",
+    "url": "/portfolio/static/media/blackjack_spring.92000259.PNG"
+  },
+  {
+    "revision": "1938a54c3c6fd773a8db09b2b4ccc1fd",
+    "url": "/portfolio/static/media/internProject_1.1938a54c.png"
+  },
+  {
+    "revision": "81ab95129fd13c94dc39342b7dadedf1",
+    "url": "/portfolio/static/media/p06_1.81ab9512.PNG"
+  },
+  {
+    "revision": "79f617870f2994758d4ce60f5eb94cb8",
+    "url": "/portfolio/static/media/p06_2.79f61787.PNG"
+  },
+  {
+    "revision": "a700d96f1f66609d387507c6b3f29130",
+    "url": "/portfolio/static/media/p06_3.a700d96f.PNG"
   },
   {
     "revision": "0a9d87317622e98267f010cd2e61a2af",
@@ -300,27 +328,31 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/p1_socket.2438a82b.PNG"
   },
   {
-    "revision": "f8ed3da0abfece5e638d3fab15000fa3",
-    "url": "/portfolio/static/media/p2_1.f8ed3da0.png"
+    "revision": "895df8b8dc1fbda429e4d68249efbdf7",
+    "url": "/portfolio/static/media/satellite_1.895df8b8.png"
   },
   {
-    "revision": "0bebaab1d2d66cd2f4d2b35357b38df3",
-    "url": "/portfolio/static/media/p2_2.0bebaab1.png"
+    "revision": "6df4e223c7595e5f1296bd2bba67d7c6",
+    "url": "/portfolio/static/media/satellite_2.6df4e223.png"
   },
   {
-    "revision": "9c56f59551d8b337af5116185fdb48ee",
-    "url": "/portfolio/static/media/p2_3.9c56f595.png"
+    "revision": "b9ba4eb2785a274b6e3323d4a7a06bf2",
+    "url": "/portfolio/static/media/satellite_3.b9ba4eb2.png"
   },
   {
-    "revision": "935acc68e835875597281a03bc446b57",
-    "url": "/portfolio/static/media/p2_4.935acc68.png"
+    "revision": "95e7dce01a7ea57667cb14ddfbe8b119",
+    "url": "/portfolio/static/media/studyTime_1.95e7dce0.PNG"
   },
   {
-    "revision": "9cd294c7f9f5e15338d3",
+    "revision": "52e7076a7bec57d6557fd9eaed3db2f9",
+    "url": "/portfolio/static/media/studyTime_2.52e7076a.PNG"
+  },
+  {
+    "revision": "4f97165561f4f0a7fcfb",
     "url": "/portfolio/static/css/1.e0f97a72.chunk.css"
   },
   {
-    "revision": "5ee18bb74aea859cc9485a3f6424a3ef",
+    "revision": "897cb928532e11b5287fcef9ab2ecb0c",
     "url": "/portfolio/index.html"
   }
 ];
