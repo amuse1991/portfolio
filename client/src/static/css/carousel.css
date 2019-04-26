@@ -1,4 +1,11 @@
 .project-carosel-item img{
     width: 100%;
-    height: auto;
+}
+
+.carousel-control-prev:hover{
+    background-color: rgba(0, 0, 0, 0.2)!important;
+}
+
+.carousel-control-next:hover{
+    background-color: rgba(0, 0, 0, 0.2)!important;
 }

@@ -40,15 +40,12 @@ export default class Projects extends Component{
             "description":"위성이 전달하는 위성 상태 정보 및 계측 정보를 도시하는 웹 어플리케이션을 개발했습니다. 본 프로젝트에서 저는 React.js와 Node.js 개발을 수행했습니다. 프로젝트 진행 중 팀원 한명이 개인 사정으로 중도하차 하였지만 오히려 그로 인해 javascript 기반의 풀스택 개발을 경험할 수 있었습니다.",
             "imgs":[
                 {
-                    "imgName":"p1_1.png",
-                    "caption":"위성 위치 정보 도시 화면"
+                    "imgName":"p1_1.png"
                 }
                 ,{
-                    "imgName":"p1_2.png",
-                    "caption":"위성 데이터 조회 화면1"
+                    "imgName":"p1_2.png"
                 },{
-                    "imgName":"p1_3.png",
-                    "caption":"위성 데이터 조회 화면2"
+                    "imgName":"p1_3.png"
                 }],
             "skills":{
                 "language":{
@@ -99,13 +96,48 @@ export default class Projects extends Component{
             ],
             "details":[
                 {
-                    "group":"프론트엔드 구현",
-                    "title":"SPA 형태의 웹 페이지 구현",
-                    "description":"React.js를 사용함으로써 페이지에 변동이 발생했을 때, 새로운 페이지를 불러오는 대신 변화가 발생한 부분만 다시 작성하도록 했습니다. 한편, 각 페이지는 위치 해시를 이용해 논리적으로 구분했으며, 이는 react-router-dom 모듈의 HashRouter를 이용해 구현했습니다.",
-                    "imges":[
+                    "title":"[BE]Web API 구현",
+                    "description":"Node.js 와 express를 사용해 웹 API를 구현했습니다. express의 Router() 클래스를 이용해 HTTP request를 각 컨트롤러에 매핑했습니다. 컨트롤러는 미리 정의된 서비스 로직에 따라 요청을 처리하며, DB 접근 시에는 ORM인 sequelize.js를 사용해 접근하도록 구현했습니다.",
+                    "imgs":[
                         {
-                            "imgName":"",
-                            "caption":""
+                            "imgName":"p1_api_1.PNG",
+                            "caption":"HTTP request mapping 구현"
+                        },
+                        {
+                            "imgName":"p1_api_2.PNG",
+                            "caption":"컨트롤러 구현"
+                        }
+                    ]
+                },
+                {
+                    "title":"[BE]웹 소켓 통신 구현",
+                    "description":"웹 소켓 모듈인 socket.io를 사용해 관제 서버 WAS, client사이의 소켓 통신을 구현했습니다. WAS는 관제 서버에서 데이터를 수신해 client에 브로드캐스팅 해 주며, 이 때 데이터의 병목 현상을 줄이기 위해 각 데이터별로 NameSpace를 만들어 활용했습니다.",
+                    "imgs":[
+                        {
+                            "imgName":"p1_socket.PNG",
+                            "caption":"웹 소켓 통신 구현"
+                        }
+                    ]
+                },
+                {
+                    "title":"[FE]SPA 형태의 웹 페이지 구현",
+                    "description":"React.js를 사용함으로써 페이지에 변동이 발생했을 때, 새로운 페이지를 불러오는 대신 변화가 발생한 부분만 다시 작성하도록 했습니다. 한편, 각 페이지는 위치 해시를 이용해 논리적으로 구분했으며, 이는 react-router-dom 모듈의 HashRouter를 이용해 구현했습니다.",
+                    "imgs":[{
+                            "imgName":"p1_hash_router.PNG",
+                            "caption":"해쉬 라우터 구현"
+                    }]
+                },
+                {
+                    "title":"[FE]React 컴포넌트 구현",
+                    "description":"Props, State에 대한 개념 및 React 컴포넌트의 생명주기를 이해하고 활용해 컴포넌트를 구현했습니다. 뿐만 아니라 비동기 호출로 인해 발생하는 문제를 async, await로 적절히 제어하여 프로그램을 구현했습니다.",
+                    "imgs":[
+                        {
+                            "imgName":"p1_lifecycle_gtd.PNG",
+                            "caption":"React 생명주기를 사용"
+                        },
+                        {
+                            "imgName":"p1_async_gtd.PNG",
+                            "caption":"async, await를 통해 비동기 호출 제어"
                         }
                     ]
                 }
@@ -131,20 +163,16 @@ export default class Projects extends Component{
             "summary":"Spring MVC 교육 과정 중 수행한 팀 프로젝트입니다. 랭킹 기능을 제공하는 블랙잭 게임을 개발 했습니다.",
             "imgs":[
                 {
-                    "imgName":"p2_1.png",
-                    "caption":"로그인 화면"
+                    "imgName":"p2_1.png"
                 },
                 {
-                    "imgName":"p2_2.png",
-                    "caption":"게임 룸 생성 화면"
+                    "imgName":"p2_2.png"
                 },
                 {
-                    "imgName":"p2_3.png",
-                    "caption":"게임 화면 1"
+                    "imgName":"p2_3.png"
                 },
                 {
-                    "imgName":"p2_4.png",
-                    "caption":"게임 화면 2"
+                    "imgName":"p2_4.png"
                 }
             ],
             "git":"https://github.com/amuse1991/spring-web-13",
@@ -194,8 +222,11 @@ export default class Projects extends Component{
             "summary":"2017년 동계 인턴 기간 동안 수행한 프로젝트 입니다. .NET MVC 프레임워크를 사용해 사원들의 업무 내용을 확인하고, 주간 및 월간 평가를 할 수 있는 웹 어플리케이션을 개발했습니다.",
             "imgs":[
                 {
-                "imgName":"p3_1.png",
-                "caption":"사내 규정상 결과물 스크린샷을 찍을 수 없었습니다."
+                    "imgName":"p3_1.png"
+                },
+                {
+                    "imgName":"p3_2.png",
+                    "caption":"사내 규정상 코드 및 결과물 사진을 가져올 수 없었습니다."
                 }
             ],
             "git":"https://github.com/amuse1991/SIMS_Client",

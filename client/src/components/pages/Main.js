@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // import Template from "../../Template";
 import { Container, Col, Row, Jumbotron, Button } from 'reactstrap';
-import { Link, Element } from "react-scroll";
 import Header from '../header/Header';
 import Home from "../body/home/Home";
 import About from "../body/about/About";

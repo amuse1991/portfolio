@@ -8,7 +8,7 @@ export default class ContactItem extends Component{
         const imageContext = require.context('../../../../public/icons/contact_icon', true);
         let imgSrc = imageContext(`./${imgName}`);
         return(
-            <Media className="mt-1">
+            <Media className="mt-1 contact-item">
                     <Media left middle>
                         <img src={imgSrc} style={{width:"3vw", marginRight:"1vw"}} />
                     </Media>

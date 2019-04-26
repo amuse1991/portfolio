@@ -26,7 +26,7 @@ export default class ModalContent extends Component{
         const {modalContent} = this.props
         return(
             <div className="modal-wrapper">
-            <ProjectNav title={modalContent.name}/>
+            {/* <ProjectNav title={modalContent.name}/> */}
                 <Row>
                     <Col className="project-header">
                         <h1 className="title">{modalContent.name}</h1>

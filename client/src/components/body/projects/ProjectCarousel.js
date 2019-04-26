@@ -36,9 +36,13 @@ export default class ProjectCarousel extends Component{
         this.setState({ activeIndex: newIndex });
     }
 
+    componentDidMount(){
+        this.next();
+    }
+
     render(){
         const {dataSet} = this.props;
-        const { activeIndex } = this.state;
+        const {activeIndex} = this.state;
         const slides = dataSet.map((item) => {
             return (
                 <CarouselItem
@@ -48,7 +52,7 @@ export default class ProjectCarousel extends Component{
                 key={item.src}
                 >
                 <img src={item.src} alt={item.caption} /><br/>
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+                {item.caption===undefined?null:<CarouselCaption className="text-primary" captionHeader={item.caption} />}
                 </CarouselItem>
             );
         });
@@ -58,7 +62,7 @@ export default class ProjectCarousel extends Component{
                 activeIndex={activeIndex}
                 next={this.next}
                 previous={this.previous}
-                ride={false}
+                className="project-carousel"
             >
                 <CarouselIndicators items={dataSet} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
                 {slides}
